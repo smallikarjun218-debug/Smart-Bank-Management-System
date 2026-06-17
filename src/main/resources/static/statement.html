@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PDF Statement</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Generate Statement</h1>
+
+<input type="number" id="accountNumber" placeholder="Enter Account Number">
+<button onclick="generatePDF()">Generate PDF</button>
+
+<script>
+function generatePDF() {
+    let accountNumber = document.getElementById("accountNumber").value;
+
+    if(accountNumber === ""){
+        alert("Enter account number");
+        return;
+    }
+
+    window.location.href = "http://localhost:9090/account/statement/" + accountNumber;
+}
+</script>
+
+</body>
+</html>

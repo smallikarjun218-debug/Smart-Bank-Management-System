@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bank Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Bank Management System</h1>
+    <div class="container">
+
+    <!-- Register -->
+    <div class="box">
+        <h2>Create Account</h2>
+        <input type="text" id="name" placeholder="Name">
+        <input type="text" id="email" placeholder="Email">
+        <input type="text" id="phone" placeholder="Phone">
+        <input type="password" id="password" placeholder="Password">
+        <button onclick="createAccount()">Create Account</button>
+    </div>
+
+    <!-- Deposit -->
+    <div class="box">
+        <h2>Deposit Money</h2>
+        <input type="number" id="depositAcc" placeholder="Account Number">
+        <input type="number" id="depositAmount" placeholder="Amount">
+        <button onclick="deposit()">Deposit</button>
+    </div>
+
+    <!-- Withdraw -->
+    <div class="box">
+        <h2>Withdraw Money</h2>
+        <input type="number" id="withdrawAcc" placeholder="Account Number">
+        <input type="number" id="withdrawAmount" placeholder="Amount">
+        <button onclick="withdrawMoney()">Withdraw</button>
+    </div>
+
+    <!-- Balance -->
+    <div class="box">
+        <h2>Check Balance</h2>
+        <input type="number" id="balanceAcc" placeholder="Account Number">
+        <button onclick="checkBalance()">Check</button>
+        <p id="balanceResult"></p>
+    </div>
+
+    <!-- Transfer -->
+    <div class="box">
+        <h2>Transfer Money</h2>
+        <input type="number" id="fromAcc" placeholder="From Account">
+        <input type="number" id="toAcc" placeholder="To Account">
+        <input type="number" id="transferAmount" placeholder="Amount">
+        <button onclick="transferMoney()">Transfer</button>
+    </div>
+
+    <!-- Transaction History -->
+    <div class="box">
+        <h2>Transaction History</h2>
+        <input type="number" id="historyAcc" placeholder="Account Number">
+        <button onclick="getTransactions()">View History</button>
+        <pre id="historyResult"></pre>
+    </div>
+
+<script src="script.js"></script>
+</body>
+</html>
